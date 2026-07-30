@@ -12,7 +12,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "predeploy": "npm run build && cp dist/client/_shell.html dist/client/index.html",
+    "predeploy": "npm run build && cp dist/client/_shell.html dist/client/index.html && rm -f dist/client/assets/*.mov",
     "deploy": "gh-pages -d dist/client"
   },
   "dependencies": {
