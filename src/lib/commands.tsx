@@ -5,13 +5,14 @@ import profilePhoto from '../assets/profile_photo.png'
 function highlightTech(text: string): ReactNode {
   const targets = [
     'Distributed Systems', 'Python', 'TensorFlow', 'Pytorch', 'Go', 'React.js',
-    'Svelte', 'Tanstack', 'Express.js', 'Nest.js', 'Rust', 'Java', 'Spring Boot',
+    'Svelte', 'TanStack Start', 'Tanstack', 'Express.js', 'Nest.js', 'Rust', 'Java', 'Spring Boot',
     'Software Architecture', 'NestJS', 'Prisma', 'PostgreSQL', 'Docker Compose',
     'Docker', 'Tauri', 'Kotlin', 'Unity', 'C#', 'Fast Fourier Transform', 'FFT',
     'Machine Learning', 'Data Structures', 'Database Technology', 'CI/CD', 'REST APIs',
+    'RabbitMQ', 'Redis', 'Nginx',
     '2yrs+', '5,000+', '1,000+', '6+', '3+', '50+'
   ]
-  const regex = /(?<=^|\s|[.,;()\/])(Software Architecture|Distributed Systems|Database Technology|Machine Learning|Docker Compose|Spring Boot|PostgreSQL|TensorFlow|Express\.js|REST APIs|React\.js|Tanstack|Pytorch|Nest\.js|Kotlin|Svelte|Python|Prisma|NestJS|Docker|5,000\+|1,000\+|Tauri|Unity|Java|Rust|FFT|50\+|Go|C#|6\+|3\+|2yrs\+)(?=$|\s|[.,;()\/])/gi
+  const regex = /(?<=^|\s|[.,;()\/])(Software Architecture|Distributed Systems|Database Technology|TanStack Start|Machine Learning|Docker Compose|Spring Boot|PostgreSQL|TensorFlow|Express\.js|REST APIs|RabbitMQ|React\.js|Tanstack|Pytorch|Nest\.js|Kotlin|Svelte|Python|Prisma|NestJS|Docker|Redis|Nginx|5,000\+|1,000\+|Tauri|Unity|Java|Rust|FFT|50\+|Go|C#|6\+|3\+|2yrs\+)(?=$|\s|[.,;()\/])/gi
   const parts = text.split(regex)
   return (
     <>

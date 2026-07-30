@@ -1,15 +1,13 @@
 import bekenspotLanding from '../assets/bekenspot_landing.png'
 import bekenspotDashboard from '../assets/bekenspot_dashboard.png'
 import bekenspotReservation from '../assets/bekenspot_reservation.png'
-import bekenspotDemo from '../assets/Demo Bekenspot Main Flow - Pemesanan Approved.mov'
 
 import minatLanding from '../assets/minat_apps_landing_page.png'
 import minat2ndPage from '../assets/minat_apps_2nd_page.png'
 import minatQuestionnaire from '../assets/minat_apps_questionaire.png'
 import minatResult from '../assets/minat_apps_result.png'
-import minatDemo from '../assets/Minat_Apps_Demo_Final.mov'
 
-import iccsciCert from '../assets/ICCSCI Certificate.pdf'
+import iccsciCert from '../assets/ICCSCI_Certificate.png'
 
 import midhubLanding from '../assets/midhub.png'
 
@@ -113,13 +111,12 @@ Beyond programming, I bring a natural affinity for public speaking and communica
   projects: [
     {
       name: 'Bekenspot',
-      tech: 'Go, React, Svelte',
+      tech: 'Go, TanStack Start, RabbitMQ, Redis, Nginx, Docker, PostgreSQL',
       description: 'A centralized workspace reservation engine with a high-performance Go backend, capturing over 5,000 active reservations within three months for 100 staff and student users.',
       images: [
         bekenspotLanding,
         bekenspotDashboard,
         bekenspotReservation,
-        bekenspotDemo,
       ],
       longDescription: 'Bekenspot is a modern, high-performance workspace booking platform designed for academic and corporate environments. Built with a robust Go backend and a highly interactive Svelte frontend, the platform streamlines the reservation process for student study rooms, computer labs, and office workspaces.',
       keyFeatures: [
@@ -138,7 +135,6 @@ Beyond programming, I bring a natural affinity for public speaking and communica
         minat2ndPage,
         minatQuestionnaire,
         minatResult,
-        minatDemo,
       ],
       longDescription: 'Minat Apps is an educational utility designed to guide middle and high school students in Jakarta through psychometric evaluation. It maps their interests, academic achievements, and personality types into concrete university major and career path recommendations.',
       keyFeatures: [
