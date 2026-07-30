@@ -283,28 +283,6 @@ export function Terminal() {
     <div className="terminal-wrapper" onClick={focusInput}>
       <div className="terminal-chrome">
 
-        {/* Lightbox Modal */}
-        {lightboxImg && (
-          <div 
-            className="modal-backdrop" 
-            onClick={() => setLightboxImg(null)}
-          >
-            <button 
-              className="modal-close" 
-              onClick={() => setLightboxImg(null)}
-              aria-label="Close lightbox"
-            >
-              <X size={28} />
-            </button>
-            <img 
-              src={lightboxImg} 
-              alt="Fullscreen view" 
-              className="lightbox-image" 
-              onClick={(e) => e.stopPropagation()} 
-            />
-          </div>
-        )}
-
         {/* Project Detail Modal */}
         {activeProject && (
           <div 
@@ -390,6 +368,28 @@ export function Terminal() {
                 </ul>
               </div>
             </div>
+          </div>
+        )}
+
+        {/* Lightbox Modal (Fullscreen Image Viewer) */}
+        {lightboxImg && (
+          <div 
+            className="modal-backdrop modal-backdrop--lightbox" 
+            onClick={() => setLightboxImg(null)}
+          >
+            <button 
+              className="modal-close" 
+              onClick={() => setLightboxImg(null)}
+              aria-label="Close lightbox"
+            >
+              <X size={28} />
+            </button>
+            <img 
+              src={lightboxImg} 
+              alt="Fullscreen view" 
+              className="lightbox-image" 
+              onClick={(e) => e.stopPropagation()} 
+            />
           </div>
         )}
         {/* Title bar */}

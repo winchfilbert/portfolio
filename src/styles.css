@@ -786,6 +786,11 @@ body,
   animation: modal-fade-in 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.modal-backdrop--lightbox {
+  z-index: 3000;
+  background: rgba(0, 0, 0, 0.92);
+}
+
 @keyframes modal-fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
