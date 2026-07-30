@@ -2,7 +2,7 @@
 
 An immersive, retro terminal-style portfolio web application designed for developers and tech recruiters. Styled after the soothing **Vesper** color scheme (`vesper.nvim`), it emulator-simulates a command-line shell with interactive capabilities.
 
-🚀 **Live Demo:** [https://winchfilbert.github.io/portfolio/](https://winchfilbert.github.io/portfolio/)
+🚀 **Live Demo:** [https://winchfilbert.github.io/Portfolio/](https://winchfilbert.github.io/Portfolio/)
 
 ---
 
