@@ -5,7 +5,7 @@
   "imports": {
     "#/*": "./src/*"
   },
-  "homepage": "https://winchfilbert.github.io/Filbert-Portfolio-TUI",
+  "homepage": "https://winchfilbert.github.io/portfolio",
   "scripts": {
     "dev": "vite dev --port 3000",
     "generate-routes": "tsr generate",

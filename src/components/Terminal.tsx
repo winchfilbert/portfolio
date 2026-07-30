@@ -10,6 +10,16 @@ type TerminalEntry = {
   content: ReactNode
 }
 
+function isVideoMedia(url: string | undefined) {
+  if (!url) return false
+  return /\.(mov|mp4|webm|m4v)(\?.*)?$/i.test(url)
+}
+
+function isPdfMedia(url: string | undefined) {
+  if (!url) return false
+  return /\.(pdf)(\?.*)?$/i.test(url)
+}
+
 export function Terminal() {
   const [entries, setEntries] = useState<TerminalEntry[]>([])
   const [inputValue, setInputValue] = useState('')
@@ -169,13 +179,14 @@ export function Terminal() {
   // Auto switch project carousel slides
   useEffect(() => {
     if (!activeProject || activeProject.images.length <= 1) return
+    if (isVideoMedia(activeProject.images[currentSlide])) return
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % activeProject.images.length)
-    }, 3500)
+    }, 4500)
 
     return () => clearInterval(interval)
-  }, [activeProject])
+  }, [activeProject, currentSlide])
 
   // Auto-focus input
   useEffect(() => {
@@ -296,12 +307,29 @@ export function Terminal() {
             >
               <X size={28} />
             </button>
-            <img 
-              src={lightboxImg} 
-              alt="Fullscreen view" 
-              className="lightbox-image" 
-              onClick={(e) => e.stopPropagation()} 
-            />
+            {isVideoMedia(lightboxImg) ? (
+              <video 
+                src={lightboxImg} 
+                controls 
+                autoPlay 
+                className="lightbox-video" 
+                onClick={(e) => e.stopPropagation()} 
+              />
+            ) : isPdfMedia(lightboxImg) ? (
+              <iframe
+                src={lightboxImg}
+                title="PDF view"
+                className="lightbox-pdf-iframe"
+                onClick={(e) => e.stopPropagation()}
+              />
+            ) : (
+              <img 
+                src={lightboxImg} 
+                alt="Fullscreen view" 
+                className="lightbox-image" 
+                onClick={(e) => e.stopPropagation()} 
+              />
+            )}
           </div>
         )}
 
@@ -328,11 +356,42 @@ export function Terminal() {
 
               {/* Carousel */}
               <div className="carousel-container">
-                <div 
-                  className="carousel-slide"
-                  style={{ backgroundImage: `url(${activeProject.images[currentSlide]})` }}
-                  onClick={() => setLightboxImg(activeProject.images[currentSlide])}
-                />
+                {isVideoMedia(activeProject.images[currentSlide]) ? (
+                  <div className="carousel-video-container">
+                    <video
+                      key={activeProject.images[currentSlide]}
+                      src={activeProject.images[currentSlide]}
+                      controls
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="carousel-video"
+                    />
+                  </div>
+                ) : isPdfMedia(activeProject.images[currentSlide]) ? (
+                  <div className="carousel-pdf-container">
+                    <iframe
+                      src={activeProject.images[currentSlide]}
+                      title="PDF Document"
+                      className="carousel-pdf-iframe"
+                    />
+                    <a 
+                      href={activeProject.images[currentSlide]} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="pdf-download-btn"
+                    >
+                      📄 Open / Download PDF Document
+                    </a>
+                  </div>
+                ) : (
+                  <div 
+                    className="carousel-slide"
+                    style={{ backgroundImage: `url(${activeProject.images[currentSlide]})` }}
+                    onClick={() => setLightboxImg(activeProject.images[currentSlide])}
+                  />
+                )}
                 
                 {activeProject.images.length > 1 && (
                   <>
