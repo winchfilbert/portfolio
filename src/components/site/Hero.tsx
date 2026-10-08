@@ -17,18 +17,57 @@ function Emphasis({ text }: { text: string }) {
 const langOf = (t: string) =>
   /[\u3040-\u30ff]/.test(t) ? 'ja' : /[\uac00-\ud7af]/.test(t) ? 'ko' : /[\u4e00-\u9fff]/.test(t) ? 'zh' : 'en'
 
-/** Cycles through greetings every 5s. Decorative: screen readers just get "I'm <name>". */
+const HOLD_MS = 2800
+const ERASE_MS = 45
+const PAUSE_MS = 250
+const TYPE_MS = 95
+
+/**
+ * Typewriter greeting: types left to right, holds, erases, then types the next one (~5s per greeting).
+ * Starts on the first greeting fully typed so there's no empty flash. Decorative: screen readers
+ * just get "I'm <name>".
+ */
 function Greeting({ items }: { items: string[] }) {
-  const [i, setI] = useState(0)
+  const [text, setText] = useState(items[0] ?? '')
+  const [lang, setLang] = useState(langOf(items[0] ?? ''))
+  const animated = items.length > 1
+
   useEffect(() => {
-    if (items.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    const t = setInterval(() => setI((n) => (n + 1) % items.length), 5000)
-    return () => clearInterval(t)
-  }, [items.length])
-  const text = items[i % items.length] ?? ''
+    if (!animated || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    let cancelled = false
+    const timers: number[] = []
+    const wait = (ms: number) => new Promise<void>((r) => timers.push(window.setTimeout(r, ms)))
+
+    ;(async () => {
+      let i = 0
+      while (!cancelled) {
+        await wait(HOLD_MS)
+        const cur = Array.from(items[i])
+        for (let n = cur.length - 1; n >= 0 && !cancelled; n--) {
+          setText(cur.slice(0, n).join(''))
+          await wait(ERASE_MS)
+        }
+        i = (i + 1) % items.length
+        const next = Array.from(items[i])
+        setLang(langOf(items[i]))
+        await wait(PAUSE_MS)
+        for (let n = 1; n <= next.length && !cancelled; n++) {
+          setText(next.slice(0, n).join(''))
+          await wait(TYPE_MS)
+        }
+      }
+    })()
+
+    return () => {
+      cancelled = true
+      timers.forEach(clearTimeout)
+    }
+  }, [items, animated])
+
   return (
-    <span className="hero__hi" aria-hidden="true">
-      <span key={text} lang={langOf(text)} className="hero__hi-t">{text}</span>
+    <span className="hero__hi" aria-hidden="true" lang={lang}>
+      {text}
+      {animated && <span className="hero__caret" />}
     </span>
   )
 }
