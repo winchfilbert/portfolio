@@ -11,7 +11,7 @@
   --line: #E3DFD2;
   --accent: #B8860B;
   --amber: #E8B931;
-  --f-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-sans: 'Inter', 'Noto Sans JP', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --f-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
   --r: 14px;
 }
@@ -83,7 +83,9 @@ a { color: inherit; }
    ======================================== */
 .hero { padding: 88px 0 96px; }
 .hero__grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 72px; align-items: end; }
-.hero__h1 { font-weight: 600; font-size: clamp(40px, 6vw, 84px); line-height: 1; letter-spacing: -.045em; margin: 24px 0 28px; }
+.hero__h1 { font-weight: 600; font-size: clamp(40px, 6vw, 80px); line-height: 1.02; letter-spacing: -.045em; margin: 24px 0 28px; }
+.hero__hi { display: block; color: var(--ink-2); margin-bottom: .08em; }
+.hero__lead { font-weight: 500; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.25; letter-spacing: -.025em; max-width: 30ch; margin-bottom: 20px; }
 .hl { color: var(--ink-2); }
 .hero__sub { font-size: 18px; max-width: 52ch; color: var(--ink-2); }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }

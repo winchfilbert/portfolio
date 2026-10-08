@@ -22,7 +22,11 @@ export function Hero() {
         <div className="hero__grid">
           <div>
             <div className="eyebrow">{profile.title} · {profile.location}</div>
-            <h1 className="hero__h1"><Emphasis text={profile.tagline} /></h1>
+            <h1 className="hero__h1">
+              {profile.greeting && <span className="hero__hi">{profile.greeting}</span>}
+              I'm {profile.name}.
+            </h1>
+            <p className="hero__lead"><Emphasis text={profile.tagline} /></p>
             <p className="hero__sub">{profile.headline}</p>
             <div className="hero__cta">
               <a className="btn btn--ink" href="#work"><ArrowDown size={16} aria-hidden /> View work</a>

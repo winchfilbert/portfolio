@@ -13,6 +13,8 @@ export type Stat = { value: string; label: string }
 
 export type Profile = {
   name: string
+  /** Shown before "I'm <name>" in the hero, e.g. こんにちは! */
+  greeting: string
   title: string
   headline: string
   tagline: string
