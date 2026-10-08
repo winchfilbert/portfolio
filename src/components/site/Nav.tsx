@@ -23,8 +23,8 @@ export function Nav() {
             <a key={id} href={`#${id}`}>{label}</a>
           ))}
         </nav>
-        <a className="btn btn--amber" href={`mailto:${profile.email}`}>
-          <Mail size={16} aria-hidden /> Email me
+        <a className="btn btn--ink" href={`mailto:${profile.email}`}>
+          <Mail size={15} aria-hidden /> Get in touch
         </a>
       </div>
     </header>

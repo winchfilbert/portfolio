@@ -10,14 +10,13 @@ export function Experience() {
   const visible = all ? items : items.slice(0, SHOWN)
 
   return (
-    <section className="sec" id="experience">
+    <section className="sec sec--line" id="experience">
       <div className="wrap">
         <div className="sec__head">
           <div>
             <div className="eyebrow">Experience</div>
-            <h2 className="sec__title">Where I've worked.</h2>
+            <h2 className="sec__title">Experience.</h2>
           </div>
-          <div className="sec__count">{String(items.length).padStart(2, '0')}</div>
         </div>
         <div className="xp">
           {visible.map((e) => (
@@ -51,12 +50,12 @@ export function Experience() {
 
 export function Skills() {
   return (
-    <section className="sec sec--ink" id="skills">
+    <section className="sec sec--line" id="skills">
       <div className="wrap">
         <div className="sec__head">
           <div>
             <div className="eyebrow">Skills</div>
-            <h2 className="sec__title">The toolbox.</h2>
+            <h2 className="sec__title">Skills.</h2>
           </div>
         </div>
         <div className="grid-skills">
@@ -77,12 +76,12 @@ export function Skills() {
 export function Credentials() {
   const { credentials, profile } = data
   return (
-    <section className="sec" id="credentials">
+    <section className="sec sec--line" id="credentials">
       <div className="wrap">
         <div className="sec__head">
           <div>
             <div className="eyebrow">Credentials</div>
-            <h2 className="sec__title">Proof, on paper.</h2>
+            <h2 className="sec__title">Credentials.</h2>
           </div>
         </div>
         <div className="grid-cred">
@@ -134,12 +133,12 @@ export function TerminalSection() {
   }, [show])
 
   return (
-    <section className="sec sec--ink" id="terminal">
+    <section className="sec sec--line" id="terminal">
       <div className="wrap">
         <div className="sec__head">
           <div>
-            <div className="eyebrow">For the curious</div>
-            <h2 className="sec__title">Prefer a command line?</h2>
+            <div className="eyebrow">Interactive</div>
+            <h2 className="sec__title">Terminal.</h2>
           </div>
         </div>
         <p className="term-lead">
@@ -163,10 +162,10 @@ export function Contact() {
   const { profile } = data
   return (
     <>
-      <section className="sec sec--amber" id="contact">
+      <section className="sec sec--ink" id="contact">
         <div className="wrap">
           <div className="eyebrow">Contact</div>
-          <h2 className="contact__h">Let's build something that lasts.</h2>
+          <h2 className="contact__h">Let's work together.</h2>
           <div className="contact__row">
             <a className="btn btn--ink" href={`mailto:${profile.email}`}><Mail size={16} aria-hidden /> {profile.email}</a>
             <a className="btn" href={`https://${profile.linkedin}`} target="_blank" rel="noopener noreferrer">

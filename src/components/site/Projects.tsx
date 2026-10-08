@@ -4,8 +4,6 @@ import { data } from '../../lib/data'
 import type { Project } from '../../lib/types'
 import { Img } from './Img'
 
-const pad = (n: number) => String(n + 1).padStart(2, '0')
-
 export function Projects() {
   const [active, setActive] = useState<Project | null>(null)
   const projects = data.projects
@@ -15,10 +13,9 @@ export function Projects() {
       <div className="wrap">
         <div className="sec__head">
           <div>
-            <div className="eyebrow">Selected work</div>
-            <h2 className="sec__title">Things I've shipped.</h2>
+            <div className="eyebrow">Work</div>
+            <h2 className="sec__title">Selected work.</h2>
           </div>
-          <div className="sec__count">{String(projects.length).padStart(2, '0')}</div>
         </div>
 
         <div className="grid-work">
@@ -35,7 +32,7 @@ export function Projects() {
                   <Img
                     img={p.images[0]}
                     alt={`${p.name} screenshot`}
-                    ratio="16 / 10"
+                    ratio={i === 0 ? '21 / 9' : '16 / 10'}
                     sizes={i === 0 ? '(max-width: 900px) 100vw, 700px' : '(max-width: 900px) 100vw, 560px'}
                   />
                 ) : (
@@ -45,13 +42,12 @@ export function Projects() {
                 )}
               </span>
               <span className="card__body">
-                <span className="card__n">PROJECT {pad(i)}</span>
                 <span className="card__t">{p.name}</span>
                 <span className="card__d">{p.description}</span>
                 <span className="chips">
                   {p.tech.map((t) => <span className="chip" key={t}>{t}</span>)}
                 </span>
-                <span className="card__more">Read case study →</span>
+                <span className="card__more">View case study →</span>
               </span>
             </button>
           ))}
@@ -137,7 +133,7 @@ function ProjectDialog({ project, onClose }: { project: Project | null; onClose:
             </div>
             <p>{project.longDescription}</p>
             <div>
-              <div className="eyebrow" style={{ marginBottom: 14 }}>Key features & impact</div>
+              <div className="eyebrow" style={{ marginBottom: 14 }}>Key features and impact</div>
               <ul className="feat">
                 {project.keyFeatures.map((f) => <li key={f}>{f}</li>)}
               </ul>

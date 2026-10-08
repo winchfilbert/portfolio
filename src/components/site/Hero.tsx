@@ -17,7 +17,7 @@ function Emphasis({ text }: { text: string }) {
 export function Hero() {
   const { profile } = data
   return (
-    <section className="sec hero" id="top">
+    <section className="hero" id="top">
       <div className="wrap">
         <div className="hero__grid">
           <div>
