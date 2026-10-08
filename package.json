@@ -5,14 +5,14 @@
   "imports": {
     "#/*": "./src/*"
   },
-  "homepage": "https://winchfilbert.github.io/Portfolio",
+  "homepage": "https://winchfilbert.github.io/portfolio",
   "scripts": {
     "dev": "vite dev --port 3000",
     "generate-routes": "tsr generate",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "predeploy": "npm run build && cp dist/client/_shell.html dist/client/index.html",
+    "predeploy": "npm run build && node scripts/postbuild.mjs",
     "deploy": "gh-pages -d dist/client"
   },
   "dependencies": {
@@ -40,6 +40,7 @@
     "@vitejs/plugin-react": "^6.0.1",
     "gh-pages": "^6.3.0",
     "jsdom": "^28.1.0",
+    "sharp": "^0.35.5",
     "typescript": "^6.0.2",
     "vite": "^8.0.0",
     "vitest": "^4.1.5"

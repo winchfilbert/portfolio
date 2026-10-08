@@ -1,0 +1,54 @@
+{
+  "name": "Filbert Christian Winch",
+  "title": "Full-Stack Engineer · ML Researcher",
+  "headline": "Research and Application Development at BINUS @Bekasi. Shipped 3+ commercial projects.",
+  "tagline": "I engineer software that *ships, scales,* and stays maintainable.",
+  "location": "Bekasi / Jakarta, Indonesia",
+  "email": "fchristianwinch@gmail.com",
+  "phone": "+62 813 8717 9100",
+  "linkedin": "linkedin.com/in/filbert-christian-winch",
+  "github": "github.com/winchfilbert",
+  "summary": "I'm a software engineer with expertise in JavaScript (front-end: React, Svelte, TanStack; back-end: Express, Nest.js), Go (back-end engineering, REST/gRPC, microservices), Java (Spring Boot), Python (machine learning) and DevOps (Linux servers, Docker, cloud services, GCP, Terraform).\n\nI adapt quickly and like exploring new or creative approaches. The goal is always clarity, performance, and long-term maintainability.\n\nBeyond programming, I have a natural affinity for public speaking and communication. I value expressing complex ideas in simple, yet impactful ways.",
+  "languages": [
+    "English (Native)",
+    "Indonesian (Native)",
+    "Japanese (Elementary)"
+  ],
+  "coreStack": [
+    "Go",
+    "TypeScript",
+    "React / TanStack",
+    "NestJS",
+    "Spring Boot",
+    "Python",
+    "PostgreSQL",
+    "Docker",
+    "Terraform",
+    "GCP / AWS"
+  ],
+  "stats": [
+    {
+      "value": "3+",
+      "label": "Commercial projects shipped"
+    },
+    {
+      "value": "5,000+",
+      "label": "Reservations handled by Bekenspot in 3 months"
+    },
+    {
+      "value": "1,000+",
+      "label": "Career profiles assessed with Minat Apps"
+    },
+    {
+      "value": "1",
+      "label": "Peer-reviewed paper, ICCSCI 2026"
+    }
+  ],
+  "photo": {
+    "src": "img/profile_photo.webp",
+    "thumb": "img/profile_photo-thumb.webp",
+    "w": 1600,
+    "h": 1409,
+    "blur": "data:image/webp;base64,UklGRiIBAABXRUJQVlA4IBYBAAAQBgCdASoYABUAPu1ur1IppiQiqAgBMB2JQBajYwe3fqA6z45S3g0L06yq5x+MfxL6iS0PY6cbGAAA/uCDteeopUBusqP6wmF9+/HLx5bVJuK/cEduHiyPjDoZacOEuhq3wQ9H9HAAyAMZa5x7xZnYOcS2GPtLe5oHJy7pYKluxh019iKvnmQY/SSb6lVb5VQ4JVs6hpQ6YFcpsWTXzgkxP25sftNJfvQ4uwvTnux5KrA75Om9+dhEFz2GYqjbdPXijRMKAjwhH+Okf9Jg/85JLsa/8fb135s6yjvXv6EtQVAchF6LWJxNsRaFJflFyurL9jDL3GGLxdn9Db7IVpdzjxDOEgycs2TDGkFPt5kXqjFBGrOwAA=="
+  }
+}

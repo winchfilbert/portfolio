@@ -1,0 +1,99 @@
+[
+  {
+    "id": "binus-sysrd",
+    "role": "System Research and Development Engineer, LS",
+    "company": "BINUS Group",
+    "location": "Jakarta, Indonesia",
+    "start": "Sep 2026",
+    "end": "Present",
+    "bullets": []
+  },
+  {
+    "id": "binus-jla",
+    "role": "Software Development & Teaching Instructor, JLA",
+    "company": "BINUS Group",
+    "location": "Bekasi, Indonesia",
+    "start": "Aug 2024",
+    "end": "Sep 2026",
+    "bullets": [
+      "Passed 6+ Progressive Assistant Training tests: 3D game programming (Unity & C#), desktop with Tauri (React + Rust), web programming (Svelte + Go + Docker), networking (Linux server, Docker, Nginx, Ansible, HAProxy, Prometheus, Grafana) and mobile apps (Kotlin).",
+      "Built QuizkeeperV2 for the Research Interest Group (Top 5 Best): a smart student-answer gatekeeper using TanStack, Spring Boot and PostgreSQL, with Windows PowerShell scripting.",
+      "Taught Database Technology, Computational Physics, Algorithm and Programming, Framework Layer Architecture (GoF design patterns in Java) and Computational Biology (Python, BioPython).",
+      "Ran extra classes to support students during practicum mid-term and final exam periods."
+    ]
+  },
+  {
+    "id": "midhub",
+    "role": "Back-End & System Infrastructure Engineer",
+    "company": "MIDHUB (Uniteda Arkato)",
+    "location": "",
+    "start": "Sep 2025",
+    "end": "Apr 2026",
+    "bullets": [
+      "Engineered core back-end REST APIs for Location, Membership, Admin and Campaign services using NestJS, Prisma and PostgreSQL.",
+      "Led a cross-functional team of five engineers, aligning product roadmaps with digital marketing strategy and speeding up feature delivery.",
+      "Architected a unified local containerized development environment with Docker Compose, cutting onboarding and setup time.",
+      "Built and automated background cron jobs for time-sensitive work such as membership lifecycle transitions and equipment expirations.",
+      "Owned continuous delivery pipelines to staging, giving QA automated test environments.",
+      "Primary point of contact for infrastructure reliability: real-time monitoring and production incident resolution."
+    ]
+  },
+  {
+    "id": "binus-appdev",
+    "role": "Application Developer",
+    "company": "BINUS Group (Enrichment Program)",
+    "location": "Jakarta, Indonesia",
+    "start": "Jan 2025",
+    "end": "Feb 2026",
+    "bullets": [
+      "Ran emotion-detection analysis with Fast Fourier Transform (FFT) algorithms, leading to a peer-reviewed publication in the ICCSCI 2026 proceedings.",
+      "Designed and deployed Minat Apps (React + Go) with the heads of Psychology, Business IT and Computer Science at BINUS @Bekasi, serving ten regional schools and 1,000+ career assessment profiles.",
+      "Designed and built Bekenspot, a centralized room and workspace reservation platform on a Go backend: 5,000+ reservations in three months for 100 staff and students."
+    ]
+  },
+  {
+    "id": "ureeka",
+    "role": "Back-End Development and UI/UX Member",
+    "company": "Ureeka BINUS",
+    "location": "Bekasi, Indonesia",
+    "start": "Apr 2023",
+    "end": "Dec 2024",
+    "bullets": []
+  },
+  {
+    "id": "binus-jla-lab",
+    "role": "Junior Laboratory Assistant",
+    "company": "BINUS University",
+    "location": "Bekasi, Indonesia",
+    "start": "Jan 2024",
+    "end": "Aug 2024",
+    "bullets": [
+      "Taught Data Structures to students and gave two extra-class sessions."
+    ]
+  },
+  {
+    "id": "binus-counselor",
+    "role": "Education Counselor",
+    "company": "BINUS University",
+    "location": "Bekasi, Indonesia",
+    "start": "Jan 2023",
+    "end": "Aug 2024",
+    "bullets": [
+      "Introduced BINUS University to 30+ schools around Jabodetabek, including education fairs and bazaars.",
+      "Presented to classes across schools and guided freshman candidates in choosing their major.",
+      "Managed relationships with 50+ freshman candidates and helped enrol 50+ new students."
+    ]
+  },
+  {
+    "id": "burncup",
+    "role": "Event Staff & Closing Master of Ceremonies",
+    "company": "Burn Cup 2023",
+    "location": "Bekasi, Indonesia",
+    "start": "Jul 2023",
+    "end": "Nov 2023",
+    "bullets": [
+      "Supported every division (esports, futsal and more) and helped organize the event.",
+      "Wrote scripts and cue cards for the opening, and was Master of Ceremonies for the closing."
+    ]
+  }
+]

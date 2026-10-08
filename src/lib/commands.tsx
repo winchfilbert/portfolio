@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react'
 import { Mail, Phone, Linkedin, MapPin, Briefcase } from 'lucide-react'
 import { profileData } from './profileData'
-import profilePhoto from '../assets/profile_photo.png'
 function highlightTech(text: string): ReactNode {
   const targets = [
     'Distributed Systems', 'Python', 'TensorFlow', 'Pytorch', 'Go', 'React.js',
@@ -82,10 +81,10 @@ export function getWelcomeBanner(): ReactNode {
           </div>
         </div>
         <img 
-          src={profilePhoto} 
+          src={profileData.photo} 
           alt="Profile" 
           className="welcome-photo cursor-pointer transition-transform hover:scale-105" 
-          onClick={() => window.dispatchEvent(new CustomEvent('open-lightbox', { detail: profilePhoto }))}
+          onClick={() => window.dispatchEvent(new CustomEvent('open-lightbox', { detail: profileData.photoFull }))}
         />
       </div>
       
@@ -217,10 +216,10 @@ function renderAbout(): ReactNode {
       <div className="output-header">👨‍💻 About Me</div>
       <div className="about-grid">
         <img 
-          src={profilePhoto} 
+          src={profileData.photo} 
           alt="Profile" 
           className="about-photo cursor-pointer transition-transform hover:scale-105" 
-          onClick={() => window.dispatchEvent(new CustomEvent('open-lightbox', { detail: profilePhoto }))}
+          onClick={() => window.dispatchEvent(new CustomEvent('open-lightbox', { detail: profileData.photoFull }))}
         />
         <div className="about-text">
           {profileData.summary.split('\n\n').map((paragraph, i) => (
@@ -266,18 +265,21 @@ function renderEducation(): ReactNode {
   return (
     <div className="output-block">
       <div className="output-header">🎓 Education</div>
-      <div className="exp-entry">
-        <div className="exp-role">{profileData.education.degree}</div>
-        <div>
-          <span className="exp-company">{profileData.education.school}</span>
-          <span className="text-gray"> | Graduated: </span>
-          <span className="exp-date">{profileData.education.graduated}</span>
+      {profileData.education.map((edu, i) => (
+        <div key={i} className="exp-entry">
+          <div className="exp-role">{edu.degree}</div>
+          <div>
+            <span className="exp-company">{edu.school}</span>
+            <span className="text-gray"> | Graduated: </span>
+            <span className="exp-date">{edu.graduated}</span>
+          </div>
+          {edu.note && (
+            <div className="text-white" style={{ marginTop: '4px' }}>
+              <span className="text-green text-bold">{edu.note}</span>
+            </div>
+          )}
         </div>
-        <div className="text-white" style={{ marginTop: '4px' }}>
-          <span className="text-dim">GPA:</span>{' '}
-          <span className="text-green text-bold">{profileData.education.gpa}</span>
-        </div>
-      </div>
+      ))}
     </div>
   )
 }
@@ -337,7 +339,7 @@ function renderProjects(): ReactNode {
           >
             <div 
               className="project-image"
-              style={{ backgroundImage: `url(${project.images[0]})` }}
+              style={{ backgroundImage: `url(${project.thumbs[0] ?? ''})` }}
             />
             <div className="project-content">
               <div className="project-title">{project.name}</div>
@@ -465,11 +467,6 @@ function renderVolunteering(): ReactNode {
     <div className="output-block">
       <div className="output-header">🤝 Volunteering</div>
       {profileData.volunteering.map((item, i) => (
-        <div key={i} className="output-item">{item}</div>
-      ))}
-      <br />
-      <div className="output-header">🏛️ Organizations</div>
-      {profileData.organizations.map((item, i) => (
         <div key={i} className="output-item">{item}</div>
       ))}
     </div>

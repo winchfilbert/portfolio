@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import type { ReactNode, KeyboardEvent, FormEvent } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
+import '../terminal.css'
 import { processCommand, getWelcomeBanner, AVAILABLE_COMMANDS } from '../lib/commands'
 
 type TerminalEntry = {
@@ -265,7 +266,7 @@ export function Terminal() {
   )
 
   const focusInput = useCallback(() => {
-    inputRef.current?.focus()
+    inputRef.current?.focus({ preventScroll: true })
   }, [])
 
   const renderPrompt = () => (
@@ -305,6 +306,7 @@ export function Terminal() {
               </div>
 
               {/* Carousel */}
+              {activeProject.images.length > 0 && (
               <div className="carousel-container">
                 <div 
                   className="carousel-slide"
@@ -349,6 +351,7 @@ export function Terminal() {
                   </>
                 )}
               </div>
+              )}
 
               {/* Details */}
               <div className="project-modal-details">
@@ -435,7 +438,6 @@ export function Terminal() {
               }}
               onKeyDown={handleKeyDown}
               placeholder="Type a command..."
-              autoFocus
               autoComplete="off"
               autoCorrect="off"
               autoCapitalize="off"

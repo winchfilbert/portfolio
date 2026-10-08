@@ -13,12 +13,12 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1, maximum-scale=1',
       },
       {
-        title: 'Filbert Christian Winch | Terminal Portfolio',
+        title: 'Filbert Christian Winch | Full-Stack Engineer & ML Researcher',
       },
       {
         name: 'description',
         content:
-          'Interactive terminal-style portfolio of Filbert Christian Winch — Full-Stack Engineer, ML Researcher, DevOps Engineer. Explore my experience, projects, and skills through an immersive terminal interface.',
+          'Portfolio of Filbert Christian Winch: full-stack engineer and ML researcher. Go, TypeScript, NestJS, Spring Boot, Python, DevOps. 3+ commercial projects shipped.',
       },
       {
         name: 'author',
@@ -26,12 +26,12 @@ export const Route = createRootRoute({
       },
       {
         property: 'og:title',
-        content: 'Filbert Christian Winch | Terminal Portfolio',
+        content: 'Filbert Christian Winch | Full-Stack Engineer & ML Researcher',
       },
       {
         property: 'og:description',
         content:
-          'Interactive terminal-style portfolio — Full-Stack Engineer, ML Researcher, DevOps Engineer.',
+          'Full-stack engineer and ML researcher. 3+ commercial projects shipped.',
       },
       {
         property: 'og:type',
@@ -39,7 +39,7 @@ export const Route = createRootRoute({
       },
       {
         name: 'theme-color',
-        content: '#0a0e14',
+        content: '#F6F1E4',
       },
     ],
     links: [
@@ -49,7 +49,7 @@ export const Route = createRootRoute({
       },
       {
         rel: 'icon',
-        href: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>',
+        href: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230E0E0C%22/><text x=%2250%22 y=%2268%22 font-size=%2250%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22%23E8B931%22 font-family=%22monospace%22>FW</text></svg>',
       },
       {
         rel: 'preconnect',
@@ -59,6 +59,10 @@ export const Route = createRootRoute({
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com',
         crossOrigin: 'anonymous',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap',
       },
     ],
   }),

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "bekenspot",
+    "name": "Bekenspot",
+    "tech": [
+      "Go",
+      "TanStack Start",
+      "RabbitMQ",
+      "Redis",
+      "Nginx",
+      "Docker",
+      "PostgreSQL"
+    ],
+    "description": "Centralized room and workspace reservation platform: 5,000+ reservations in three months for 100 staff and students.",
+    "longDescription": "Bekenspot is a workspace booking platform for academic and corporate environments. A high-performance Go backend and a TanStack Start frontend streamline reservations for student study rooms, computer labs and office workspaces at BINUS @Bekasi.",
+    "keyFeatures": [
+      "REST API that handled 5,000+ reservations in 3 months",
+      "Interactive floor plans and real-time room occupancy",
+      "Automated slot checking with concurrency conflict prevention",
+      "User check-in and automatic release of abandoned reservations"
+    ],
+    "images": [
+      {
+        "src": "img/bekenspot_landing.webp",
+        "thumb": "img/bekenspot_landing-thumb.webp",
+        "w": 1600,
+        "h": 888,
+        "blur": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAABwBACdASoYAA0APu1iqU2ppaQiMAgBMB2JYwCdAd0jg2ankrFsq2GrFVpmAADiBD4kx+VnnOuro+j9bYCI2PqY+AO6Dtp+DifxGzfcbXTw28FiBcmznEBcQ0V0LTV89AEum1dPGo26Aju3uRJa6VjVzq3hD6aorgL1fDtHJ5VpggHpi+OwpcfZAV34YLHhCSJzsvr+T83FYgAA"
+      },
+      {
+        "src": "img/bekenspot_dashboard.webp",
+        "thumb": "img/bekenspot_dashboard-thumb.webp",
+        "w": 1600,
+        "h": 888,
+        "blur": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAACwAwCdASoYAA0APu1kqU2ppaQiMAgBMB2JZQDCgCHoaIkZdx+NgADiZWT/L5jtDGBAh88yyS0fLvFTlg2418BQOgHcIHIWouiX9LQtk1HKcBdd9IiMq4+vu6ocNnvFzf4I5qZ3NMQ3FPsk2vrBTrO4Vns5845dAuYTnC7P+8zYc2HUsC4lrRhU0RrM1nYRa+gM1gF6iFwjWHzlv210QUCwukAAAA=="
+      },
+      {
+        "src": "img/bekenspot_reservation.webp",
+        "thumb": "img/bekenspot_reservation-thumb.webp",
+        "w": 1600,
+        "h": 894,
+        "blur": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAADQAwCdASoYAA0APu1iqU2ppaQiMAgBMB2JZAC7IDZBKqeRx+GXq0AA/U/YqsSrnb7c4rSpuXsfKuOHVYoWSV+3TE8pLCAg7dy4hBqza8eA4yl36ds4fCW5ISYdSEBvDimB4hYEHv9L1lnqof5kdOY/fG4Q/+1u/6Z13X6WTnBehwQdOWQHDDhaSED7rwMPpwboQ2OnNUgsoyxZcZjnyeDdbbBCSobDTyuSYMAA"
+      }
+    ]
+  },
+  {
+    "id": "minat-apps",
+    "name": "Minat Apps",
+    "tech": [
+      "React",
+      "Go"
+    ],
+    "description": "Career self-assessment platform serving ten regional schools, with 1,000+ student profiles captured.",
+    "longDescription": "Minat Apps guides middle and high school students through psychometric evaluation, mapping interests, achievements and personality types to university majors and career paths. Built with the Psychology lab and the Business IT and Software Engineering program heads at BINUS @Bekasi.",
+    "keyFeatures": [
+      "1,000+ student career profiles across 10 partner schools",
+      "Go API server with a structured analytics dashboard",
+      "Interactive assessments with instant graphical reports",
+      "Teacher-facing analytics to track and filter class metrics"
+    ],
+    "images": [
+      {
+        "src": "img/minat_apps_landing_page.webp",
+        "thumb": "img/minat_apps_landing_page-thumb.webp",
+        "w": 1600,
+        "h": 958,
+        "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABQBACdASoYAA4APu1iqU2ppaOiMAgBMB2JYgCdMoADUFsK+jxdUwclJMAAAP7nH47F84xrw1rVz9HiBFKQ9F9txSWrGpKtTwvmJb8IcIgaP0WMG55SnvhDgFkh4xcrcYGsLcgA"
+      },
+      {
+        "src": "img/minat_apps_2nd_page.webp",
+        "thumb": "img/minat_apps_2nd_page-thumb.webp",
+        "w": 1600,
+        "h": 926,
+        "blur": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwBACdASoYAA4APu1iqU2ppaOiMAgBMB2JbACdIExCcKCieLzPUPnKM5wA/rp6yua3bhl76wxF+gsicilP3Jim912OLN7Dbk7J24G9i5I352ad+RLOL9cgLZ3G/5FQn0Q1r8VLscJYJlvcEzZH8Z8tvnscu2IdO2cFxmAA"
+      },
+      {
+        "src": "img/minat_apps_questionaire.webp",
+        "thumb": "img/minat_apps_questionaire-thumb.webp",
+        "w": 1600,
+        "h": 1179,
+        "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABwBACdASoYABIAPu1qq08ppiOjMBgIATAdiWQAx/X/4Bi/o/gUnQGg1NZHwAD+FIaNg09KtHvslX1VzwAF3WoqKeIy/coWxUIwP+dnm12fes/L/JnP2gY9LW1cz1uHYCEzlesGAoLpWT5MuO2h/OrCvbBshk9+AAA="
+      },
+      {
+        "src": "img/minat_apps_result.webp",
+        "thumb": "img/minat_apps_result-thumb.webp",
+        "w": 1308,
+        "h": 1448,
+        "blur": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAADQBQCdASoYABsAPu1qqVAppiOiqA1RMB2JbACdMoR1B67w5NAE0jo0AJuxBT3V/gDg1+7IB8IAAP2YzkuiLdqgFdQPGNpw1U2Py81jQK0v1oXVfVjUMUB5RfNT9sdWwm7hg8K+YDi3UbRwRv+p9csy1rMqurLuoEpkyHck8FbEiAhdoStq6OXWXQ/GegOoFhBRqfZabKT/yqEc/k/W63/qzPL0jPmMny2N8fm9SzX2aQdUyokfKbdH+ip85EmDF97+peHe9PCEnQGQeO5N9l9fhvALRlmT9hq4suxIC30FujE0QTZt8qs9jRU7zGAA"
+      }
+    ]
+  },
+  {
+    "id": "midhub",
+    "name": "Midhub Platform",
+    "tech": [
+      "NestJS",
+      "Prisma",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "description": "Membership and campaign management platform: REST APIs, automated cron jobs and CI/CD pipelines.",
+    "longDescription": "Midhub is an enterprise membership and promotional campaign system developed for Uniteda Arkato. It processes heavy customer data flows, coordinates subscription lifecycles and automates marketing campaigns.",
+    "keyFeatures": [
+      "Back-end REST services for thousands of membership accounts (NestJS, Prisma)",
+      "Containerized local setup that cut engineer onboarding time by 40%",
+      "Database cron routines preventing late membership fee errors",
+      "CI pipelines with automatic deployment to QA staging"
+    ],
+    "images": [
+      {
+        "src": "img/midhub.webp",
+        "thumb": "img/midhub-thumb.webp",
+        "w": 1600,
+        "h": 933,
+        "blur": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAwBACdASoYAA4APu1iqU2ppaOiMAgBMB2JQAqP23lm+zS40yO/Pj9BTAAA/vCHxyQFJGB9/EA+hDHLTA9teWcOvMtjqlsovW3PZThIW/OKtilgZAR763lrYXHA5iNB/8UXScChdOvK3ncIi/icbwMXl9ZulyM88xdQVY+neIvYdEfVsjzrzfCpgwskAAAA"
+      }
+    ]
+  },
+  {
+    "id": "emotion-detection",
+    "name": "Emotion Detection Research",
+    "tech": [
+      "Python",
+      "FFT",
+      "Machine Learning"
+    ],
+    "description": "FFT-based emotion detection from biosensor signals, published in the ICCSCI 2026 proceedings.",
+    "longDescription": "Automated emotion classification from physiological signals. Fast Fourier Transform processing extracts frequency-domain features that feed a custom machine-learning classifier.",
+    "keyFeatures": [
+      "Peer-reviewed publication, ICCSCI 2026 proceedings",
+      "Python FFT pipelines isolating emotional trigger frequencies",
+      "87% accuracy across standard classifiers (SVM, Random Forest)",
+      "Feature extraction fast enough for potential real-time detection"
+    ],
+    "images": [
+      {
+        "src": "img/iccsci_certificate.webp",
+        "thumb": "img/iccsci_certificate-thumb.webp",
+        "w": 1600,
+        "h": 1131,
+        "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBQCdASoYABEAPu1or1AppaSiqAqpMB2JZwDM0BEl8Di0Zcd06DebVM8TkNrZ/1RgAP7iAyBaPEayhWqxLlGYvN320izTovST131X40m/X2S0lGXNGmZsNqsbV+GZCuZabGs3K8fNXjLFPgufQAAA"
+      }
+    ]
+  },
+  {
+    "id": "quizkeeper",
+    "name": "QuizkeeperV2",
+    "tech": [
+      "TanStack",
+      "Spring Boot",
+      "PostgreSQL",
+      "PowerShell"
+    ],
+    "description": "Smart student-answer gatekeeper built for the Research Interest Group. Top 5 Best.",
+    "longDescription": "QuizkeeperV2 is a backup and gatekeeping layer for student answers during assessments, built for the BINUS Research Interest Group and ranked in the Top 5 Best.",
+    "keyFeatures": [
+      "TanStack front end with a Spring Boot and PostgreSQL back end",
+      "Windows PowerShell scripting for deployment and operations"
+    ],
+    "images": []
+  }
+]

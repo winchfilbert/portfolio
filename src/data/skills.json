@@ -1,0 +1,82 @@
+{
+  "groups": [
+    {
+      "name": "Languages",
+      "items": [
+        "TypeScript / JavaScript",
+        "Go",
+        "Python",
+        "Java",
+        "Rust",
+        "C#",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "Front-end",
+      "items": [
+        "React",
+        "TanStack",
+        "Svelte",
+        "Tauri",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "name": "Back-end",
+      "items": [
+        "NestJS",
+        "Express",
+        "Spring Boot",
+        "REST",
+        "gRPC",
+        "Microservices"
+      ]
+    },
+    {
+      "name": "Data",
+      "items": [
+        "PostgreSQL",
+        "Prisma",
+        "Redis",
+        "RabbitMQ",
+        "Data Warehouse Architecture"
+      ]
+    },
+    {
+      "name": "DevOps & Cloud",
+      "items": [
+        "Docker",
+        "Terraform",
+        "GCP",
+        "AWS",
+        "Azure",
+        "Linux Server",
+        "Nginx",
+        "HAProxy",
+        "Ansible",
+        "CI/CD",
+        "Prometheus",
+        "Grafana"
+      ]
+    },
+    {
+      "name": "ML / AI",
+      "items": [
+        "Machine Learning",
+        "TensorFlow",
+        "PyTorch",
+        "FFT Analysis"
+      ]
+    },
+    {
+      "name": "Communication",
+      "items": [
+        "Public Speaking",
+        "Master of Ceremonies",
+        "Teaching",
+        "Project Management"
+      ]
+    }
+  ]
+}
