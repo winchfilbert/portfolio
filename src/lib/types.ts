@@ -13,8 +13,8 @@ export type Stat = { value: string; label: string }
 
 export type Profile = {
   name: string
-  /** Shown before "I'm <name>" in the hero, e.g. こんにちは! */
-  greeting: string
+  /** Hero greetings; the hero cycles through them every 5 seconds */
+  greetings: string[]
   title: string
   headline: string
   tagline: string

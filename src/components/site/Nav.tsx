@@ -1,5 +1,4 @@
-import { Mail } from 'lucide-react'
-import { data } from '../../lib/data'
+import { useEffect, useState } from 'react'
 
 const links = [
   ['work', 'Work'],
@@ -7,26 +6,39 @@ const links = [
   ['skills', 'Skills'],
   ['credentials', 'Credentials'],
   ['terminal', 'Terminal'],
+  ['contact', 'Contact'],
 ] as const
 
+/** Floating pill nav; highlights the section currently in view. */
 export function Nav() {
-  const { profile } = data
+  const [active, setActive] = useState<string>('')
+
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && setActive(e.target.id)),
+      { rootMargin: '-45% 0px -50% 0px' },
+    )
+    links.forEach(([id]) => {
+      const el = document.getElementById(id)
+      if (el) io.observe(el)
+    })
+    const onTop = () => window.scrollY < 200 && setActive('')
+    window.addEventListener('scroll', onTop, { passive: true })
+    return () => {
+      io.disconnect()
+      window.removeEventListener('scroll', onTop)
+    }
+  }, [])
+
   return (
     <header className="nav">
-      <div className="wrap nav__in">
-        <a href="#top" className="nav__brand">
-          <span className="nav__mark">FW</span>
-          <span>{profile.name}</span>
-        </a>
-        <nav className="nav__links" aria-label="Sections">
-          {links.map(([id, label]) => (
-            <a key={id} href={`#${id}`}>{label}</a>
-          ))}
-        </nav>
-        <a className="btn btn--ink" href={`mailto:${profile.email}`}>
-          <Mail size={15} aria-hidden /> Get in touch
-        </a>
-      </div>
+      <nav className="nav__pill" aria-label="Sections">
+        {links.map(([id, label]) => (
+          <a key={id} href={`#${id}`} className="nav__link" aria-current={active === id ? 'true' : undefined}>
+            {label}
+          </a>
+        ))}
+      </nav>
     </header>
   )
 }

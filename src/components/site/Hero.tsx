@@ -1,5 +1,5 @@
 import { ArrowDown, Github, Linkedin } from 'lucide-react'
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { data } from '../../lib/data'
 import { Img } from './Img'
 
@@ -14,6 +14,25 @@ function Emphasis({ text }: { text: string }) {
   )
 }
 
+const langOf = (t: string) =>
+  /[\u3040-\u30ff]/.test(t) ? 'ja' : /[\uac00-\ud7af]/.test(t) ? 'ko' : /[\u4e00-\u9fff]/.test(t) ? 'zh' : 'en'
+
+/** Cycles through greetings every 5s. Decorative: screen readers just get "I'm <name>". */
+function Greeting({ items }: { items: string[] }) {
+  const [i, setI] = useState(0)
+  useEffect(() => {
+    if (items.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const t = setInterval(() => setI((n) => (n + 1) % items.length), 5000)
+    return () => clearInterval(t)
+  }, [items.length])
+  const text = items[i % items.length] ?? ''
+  return (
+    <span className="hero__hi" aria-hidden="true">
+      <span key={text} lang={langOf(text)} className="hero__hi-t">{text}</span>
+    </span>
+  )
+}
+
 export function Hero() {
   const { profile } = data
   return (
@@ -23,7 +42,7 @@ export function Hero() {
           <div>
             <div className="eyebrow">{profile.title} · {profile.location}</div>
             <h1 className="hero__h1">
-              {profile.greeting && <span className="hero__hi">{profile.greeting}</span>}
+              {profile.greetings.length > 0 && <Greeting items={profile.greetings} />}
               I'm {profile.name}.
             </h1>
             <p className="hero__lead"><Emphasis text={profile.tagline} /></p>

@@ -13,9 +13,9 @@ export function ProfileEditor({ value: p, onChange, token }: Props<Profile>) {
         <div className="box__b">
           <div className="row2">
             <Text label="Name" value={p.name} onChange={(name) => set({ name })} />
-            <Text label="Greeting (before I'm …)" hint="e.g. Hi!  or  こんにちは!" value={p.greeting} onChange={(greeting) => set({ greeting })} />
+            <Text label="Title (small line above the name)" value={p.title} onChange={(title) => set({ title })} />
           </div>
-          <Text label="Title (small line above the name)" value={p.title} onChange={(title) => set({ title })} />
+          <Strings label="Hero greetings (rotate every 5 seconds)" hint="Shown before “I'm …”, e.g. Hello!, こんにちは!, Halo!" items={p.greetings} onChange={(greetings) => set({ greetings })} />
           <Text label="Tagline (under the name)" hint="Wrap words in *asterisks* to highlight them in amber." value={p.tagline} onChange={(tagline) => set({ tagline })} />
           <Text label="Headline (sentence under the tagline)" value={p.headline} onChange={(headline) => set({ headline })} />
           <Text label="About / summary" hint="Blank line between paragraphs. Also used by the terminal." area rows={9} value={p.summary} onChange={(summary) => set({ summary })} />
