@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Mail, Menu, X } from 'lucide-react'
+import { data } from '../../lib/data'
 
 const links = [
   ['work', 'Work'],
@@ -12,7 +13,7 @@ const links = [
 
 /**
  * Floating glass pill on desktop. On phones the same pill collapses into a hamburger
- * that shows the current section and opens the links in a dropdown.
+ * anchored top-left that shows the current section and opens the links in a dropdown.
  */
 export function Nav() {
   const [active, setActive] = useState<string>('')
@@ -73,7 +74,7 @@ export function Nav() {
           aria-controls="nav-panel"
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? <X size={20} /> : <Menu size={20} />}
+          <span className="nav__bar-ico">{open ? <X size={20} /> : <Menu size={20} />}</span>
           <span>{current ?? 'Menu'}</span>
         </button>
         {open && (
@@ -89,6 +90,9 @@ export function Nav() {
                 {label}
               </a>
             ))}
+            <a className="btn btn--ink nav__cta" href={`mailto:${data.profile.email}`} onClick={() => setOpen(false)}>
+              <Mail size={16} aria-hidden /> Get in touch
+            </a>
           </nav>
         )}
       </div>

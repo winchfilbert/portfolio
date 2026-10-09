@@ -130,7 +130,7 @@ export function StackBand() {
             {stack.map((s) => (
               <li className="band__item" key={s}>
                 <span className="band__logo">
-                  {techHasLogo(s) ? <TechIcon name={s} size={44} /> : <span className="band__mono">{s.slice(0, 2)}</span>}
+                  {techHasLogo(s) ? <TechIcon name={s} size={44} eager /> : <span className="band__mono">{s.slice(0, 2)}</span>}
                 </span>
                 <span className="band__name">{s}</span>
               </li>
