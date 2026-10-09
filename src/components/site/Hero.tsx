@@ -119,18 +119,23 @@ export function Hero() {
   )
 }
 
+/** Auto-scrolling logo carousel: three identical groups so the -33.33% loop is seamless on wide screens. */
 export function StackBand() {
+  const stack = data.profile.coreStack
   return (
     <div className="band" aria-label="Core stack">
-      <div className="band__in">
-        {data.profile.coreStack.map((s) => (
-          <div className="band__item" key={s}>
-            <span className="band__logo">
-              <TechIcon name={s} size={44} />
-              {!techHasLogo(s) && <span className="band__mono">{s.slice(0, 2)}</span>}
-            </span>
-            <span className="band__name">{s}</span>
-          </div>
+      <div className="band__track">
+        {[0, 1, 2].map((copy) => (
+          <ul className="band__group" key={copy} aria-hidden={copy > 0 ? 'true' : undefined}>
+            {stack.map((s) => (
+              <li className="band__item" key={s}>
+                <span className="band__logo">
+                  {techHasLogo(s) ? <TechIcon name={s} size={44} /> : <span className="band__mono">{s.slice(0, 2)}</span>}
+                </span>
+                <span className="band__name">{s}</span>
+              </li>
+            ))}
+          </ul>
         ))}
       </div>
     </div>

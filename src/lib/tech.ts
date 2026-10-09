@@ -23,10 +23,15 @@ const ALIASES: Record<string, string> = {
   kubernetes: 'kubernetes', k8s: 'kubernetes',
   nodejs: 'nodejs', node: 'nodejs', mysql: 'mysql', mongodb: 'mongodb', git: 'git',
   cplusplus: 'cplusplus', cpp: 'cplusplus', c: 'c',
+  tanstack: 'tanstack', tanstackstart: 'tanstack', tanstackquery: 'tanstack', tanstackrouter: 'tanstack',
 }
 
-/** Logo file name (without extension) for a skill label, or undefined if we have none. */
+/** Logos that aren't SVG (everything else is <name>.svg) */
+const EXT: Record<string, string> = { tanstack: 'png' }
+
+/** Logo file name (with extension) for a skill label, or undefined if we have none. */
 export function techLogo(label: string): string | undefined {
   const key = label.toLowerCase().replace(/#/g, 'sharp').replace(/\+\+/g, 'plusplus').replace(/\+/g, 'plus').replace(/[^a-z0-9]/g, '')
-  return ALIASES[key]
+  const name = ALIASES[key]
+  return name ? `${name}.${EXT[name] ?? 'svg'}` : undefined
 }

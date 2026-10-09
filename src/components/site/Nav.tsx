@@ -11,8 +11,8 @@ const links = [
 ] as const
 
 /**
- * Floating glass pill on desktop. On phones it collapses to a compact bar
- * (current section + menu button) that opens a dropdown panel.
+ * Floating glass pill on desktop. On phones the same pill collapses into a hamburger
+ * that shows the current section and opens the links in a dropdown.
  */
 export function Nav() {
   const [active, setActive] = useState<string>('')
@@ -65,22 +65,17 @@ export function Nav() {
       </nav>
 
       <div className="nav__m" ref={mobileRef}>
-        <div className="nav__bar glass">
-          <a href="#top" className="nav__brand" onClick={() => setOpen(false)}>
-            <span className="nav__mark">FW</span>
-            <span className="nav__cur">{current ?? 'Filbert Winch'}</span>
-          </a>
-          <button
-            type="button"
-            className="nav__burger"
-            aria-label={open ? 'Close menu' : 'Open menu'}
-            aria-expanded={open}
-            aria-controls="nav-panel"
-            onClick={() => setOpen((v) => !v)}
-          >
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </div>
+        <button
+          type="button"
+          className="nav__bar glass"
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-expanded={open}
+          aria-controls="nav-panel"
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? <X size={20} /> : <Menu size={20} />}
+          <span>{current ?? 'Menu'}</span>
+        </button>
         {open && (
           <nav id="nav-panel" className="nav__panel glass" aria-label="Sections">
             {links.map(([id, label]) => (
