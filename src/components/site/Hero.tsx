@@ -2,6 +2,10 @@ import { ArrowDown, Github, Linkedin } from 'lucide-react'
 import { Fragment, useEffect, useState } from 'react'
 import { data } from '../../lib/data'
 import { Img } from './Img'
+import { TechIcon } from './TechIcon'
+import { techLogo } from '../../lib/tech'
+
+const techHasLogo = (n: string) => Boolean(techLogo(n))
 
 /** `*text*` marks the amber highlight. */
 function Emphasis({ text }: { text: string }) {
@@ -120,7 +124,13 @@ export function StackBand() {
     <div className="band" aria-label="Core stack">
       <div className="band__in">
         {data.profile.coreStack.map((s) => (
-          <span className="band__item" key={s}>{s}</span>
+          <div className="band__item" key={s}>
+            <span className="band__logo">
+              <TechIcon name={s} size={44} />
+              {!techHasLogo(s) && <span className="band__mono">{s.slice(0, 2)}</span>}
+            </span>
+            <span className="band__name">{s}</span>
+          </div>
         ))}
       </div>
     </div>

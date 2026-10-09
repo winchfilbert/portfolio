@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { Github, Linkedin, Mail } from 'lucide-react'
 import { data } from '../../lib/data'
+import { TechIcon } from './TechIcon'
 
 const SHOWN = 4
 
@@ -63,7 +64,12 @@ export function Skills() {
             <div className="skill" key={g.name}>
               <h3>{g.name}</h3>
               <div className="chips">
-                {g.items.map((s) => <span className="chip" key={s}>{s}</span>)}
+                {g.items.map((s) => (
+                  <span className="chip chip--lg" key={s}>
+                    <TechIcon name={s} size={22} />
+                    {s}
+                  </span>
+                ))}
               </div>
             </div>
           ))}

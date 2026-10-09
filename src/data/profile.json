@@ -26,14 +26,15 @@
   "coreStack": [
     "Go",
     "TypeScript",
-    "React / TanStack",
+    "React",
     "NestJS",
     "Spring Boot",
     "Python",
     "PostgreSQL",
     "Docker",
     "Terraform",
-    "GCP / AWS"
+    "Google Cloud",
+    "AWS"
   ],
   "stats": [
     {
